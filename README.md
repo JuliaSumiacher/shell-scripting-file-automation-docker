@@ -1,6 +1,22 @@
-Para inicializar en contenedor y poder acceder al menú debe ingresar por consola los siguientes 2 comandos
+# Shell Scripting File Automation & Docker
 
-sudo docker build -t tp_entorno .
-sudo docker run -it -v "ruta absoluta"/TP-ENTORNO:/media tp_entorno
+A collection of Bash shell scripts organized around an interactive menu to automate file generation, processing, compression, and decompression, packaged with a `Dockerfile`.
 
-IMPORTANTE: asegúrese de reemplazar donde dice "ruta absoluta" por la ruta para llegar a la carpeta que clonó "TP-ENTORNO"
+## Project Structure
+
+- `menu.sh` — Interactive menu entry point orchestrating the available shell scripts[cite: 21].
+- `generar.sh` — Script for generating files[cite: 21].
+- `procesar.sh` — Script for processing files[cite: 21].
+- `comprimir.sh` — Script for compressing files[cite: 21].
+- `descomprimir.sh` — Script for decompressing files[cite: 21].
+- `dockerfile` — Container definition for running the shell scripts in a Docker environment[cite: 21].
+
+## Usage
+
+### Run Locally
+
+Make the scripts executable and launch the interactive menu[cite: 21]:
+
+```bash
+chmod +x *.sh
+./menu.sh
